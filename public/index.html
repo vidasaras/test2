@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Communication</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/peerjs/1.5.4/peerjs.min.js"></script>
+  <style>
+    #remoteAudio { width: 100%; }
+  </style>
+</head>
+<body>
+  <h1>PeerJS Audio Communication</h1>
+
+  <h2>Your Peer ID: <span id="peerId"></span></h2>
+
+  <h3>Start a Call</h3>
+  <input type="text" id="callPeerId" placeholder="Enter peer ID to call">
+  <button onclick="makeCall()">Call</button>
+
+  <h3>Incoming Call</h3>
+  <button id="answerButton" style="display: none;" onclick="answerCall()">Answer Call</button>
+
+  <h3>Your Audio</h3>
+  <audio id="localAudio" controls autoplay></audio>
+
+  <h3>Remote Audio</h3>
+  <audio id="remoteAudio" controls autoplay></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
